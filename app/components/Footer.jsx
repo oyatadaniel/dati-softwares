@@ -1,0 +1,102 @@
+import React from "react";
+
+export default function Footer() {
+  return (
+    <div>
+      <footer className="bg-dark text-white pt-5 pb-4">
+        <div className="container text-md-start">
+          <div className="row">
+            {/* Company Info */}
+            <div className="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+              <h6 className="text-uppercase fw-bold mb-3">
+                <img src="/logo.png" alt="Logo" style={{ width: "130px" }} />
+              </h6>
+              <p className="small">
+                Dati Software builds high-quality, efficient software solutions
+                tailored to your needs.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 className="text-uppercase fw-bold mb-3 small">Quick Links</h6>
+              <p className="small">
+                <a href="#home" className="text-white text-decoration-none">
+                  Home
+                </a>
+              </p>
+              <p className="small">
+                <a href="#about" className="text-white text-decoration-none">
+                  Our Apps
+                </a>
+              </p>
+              <p className="small">
+                <a href="#services" className="text-white text-decoration-none">
+                  Services
+                </a>
+              </p>
+              <p className="small">
+                <a href="#contact" className="text-white text-decoration-none">
+                  Contact
+                </a>
+              </p>
+            </div>
+
+            {/* Contact Info */}
+            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 className="text-uppercase fw-bold mb-3 small">Contact</h6>
+              <p className="small">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-headset"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5" />
+                </svg>{" "}
+                +254 790 084 094
+              </p>
+              <p className="small">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-envelope-at"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                  <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                </svg>{" "}
+                info@datisoftwares.com
+              </p>
+              <p className="small">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                </svg>{" "}
+                Nairobi, Kenya
+              </p>
+            </div>
+          </div>
+
+          <hr className="mb-4" />
+
+          <div className="text-center mt-4 small">
+            &copy; {new Date().getFullYear()} DATI Softwares. All rights
+            reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

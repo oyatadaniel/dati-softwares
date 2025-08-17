@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,7 +21,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lexend", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,4 +41,142 @@ a {
   html {
     color-scheme: dark;
   }
+}
+.navbar {
+  background-color: #fff;
+  padding: 1.4rem;
+}
+.navbar a {
+  font-size: 14px;
+}
+/* Smooth text animation */
+.animated-text {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Reduce carousel height */
+.carousel-item {
+  height: 450px; /* adjust as needed */
+}
+
+.carousel-img {
+  object-fit: cover;
+  height: 100%;
+}
+
+/* Caption fix - force left alignment & center vertically */
+.carousel-caption {
+  top: 50%; /* vertical center */
+  transform: translateY(-50%);
+  left: 5%; /* move caption to left */
+  right: auto !important; /* override bootstrap right */
+  bottom: auto !important; /* override bootstrap bottom */
+  max-width: 550px;
+  text-align: left; /* text aligned to left */
+  align-items: flex-start; /* flex children aligned left */
+}
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+.custom-toggler {
+  padding: 0.25rem 0.4rem; /* reduce button padding */
+  font-size: 0.9rem; /* smaller size */
+  border: 1px solid #ccc; /* lighter border */
+  border-radius: 6px; /* softer rounded look */
+}
+
+.custom-toggler .navbar-toggler-icon {
+  width: 1rem; /* shrink icon */
+  height: 1rem;
+}
+.about {
+  font-size: 0.9rem !important;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.card-contact {
+  padding: 1.2rem;
+  font-size: 12px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.contact a:hover {
+  color: #01c49b;
+}
+.nav-link.active {
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* at the bottom of the link */
+  left: 50%; /* center horizontally */
+  transform: translateX(-50%);
+  width: 20%; /* underline width */
+  height: 6px; /* thickness of underline */
+  background-color: #01c49b; /* bootstrap primary color */
+  border-radius: 6px;
+}
+.nav-link {
+  position: relative;
+  color: #000; /* normal text color */
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: currentColor;
+}
+
+.nav-link:hover {
+  background: linear-gradient(45deg, #000 45%, #fff 48%, #fff 52%, #000 55%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s forwards; /* moves only once */
+}
+
+@keyframes shine {
+  from {
+    background-position: 200% 200%; /* start off right */
+  }
+  to {
+    background-position: -200% -200%; /* move to left */
+  }
+}
+h2 {
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block; /* so the underline is centered on the text width */
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10;
+  left: 7%;
+  transform: translateX(-50%);
+  width: 10%; /* underline width */
+  height: 6px; /* thickness */
+  background-color: #01c49b; /* underline color */
+  border-radius: 6px; /* optional: rounded edges */
+}
+.my-menu {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border: none;
 }
