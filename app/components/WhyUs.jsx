@@ -59,7 +59,7 @@ export default function WhyUs() {
                     </div>
                   </div>
                   <div style={{ fontSize: "12px" }}>
-                    <p class="mb-0 text-dark fw-bold">
+                    <p className="mb-0 text-dark fw-bold">
                       Prompt Project Delivery
                     </p>
                     <span class=" text-muted">
