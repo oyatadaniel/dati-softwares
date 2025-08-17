@@ -164,17 +164,27 @@ h2 {
   display: inline-block; /* so the underline is centered on the text width */
 }
 
+/* Hide underline by default (for small screens) */
 h2::after {
   content: "";
-  position: absolute;
-  bottom: 10;
-  left: 7%;
-  transform: translateX(-50%);
-  width: 10%; /* underline width */
-  height: 6px; /* thickness */
-  background-color: #01c49b; /* underline color */
-  border-radius: 6px; /* optional: rounded edges */
+  display: none;
 }
+
+@media (min-width: 768px) {
+  /* md breakpoint */
+  h2::after {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10%; /* underline width */
+    height: 6px; /* thickness */
+    background-color: #01c49b; /* underline color */
+    border-radius: 6px;
+  }
+}
+
 .my-menu {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
