@@ -175,8 +175,8 @@ h2::after {
   h2::after {
     display: block;
     position: absolute;
-    bottom: 0px;
-    left: 50%;
+    bottom: -10px;
+    left: 7%;
     transform: translateX(-50%);
     width: 10%; /* underline width */
     height: 6px; /* thickness */
