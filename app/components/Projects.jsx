@@ -18,7 +18,7 @@ export default function Projects() {
           <div className="col-md-10">
             <h2>Our Services</h2>
             <div className="row">
-              <div className="row ">
+              <div className="row g-4">
                 {/* Card 1 */}
                 <div className="col-md-4">
                   <div className="card h-100 shadow-sm border-0 text-center">
