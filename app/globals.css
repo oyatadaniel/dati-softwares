@@ -45,6 +45,7 @@ a {
 .navbar {
   background-color: #fff;
   padding: 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 .navbar a {
   font-size: 14px;
@@ -189,4 +190,14 @@ h2::after {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   border: none;
+}
+.btn-carousel {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 0.6rem 1.8rem 0.6rem 1.8rem;
+  color: #01c49b;
+  font-size: 12px;
+}
+.btn-carousel:hover {
+  background-color: #01c49b;
 }

@@ -10,7 +10,7 @@ export default function NavBarNav() {
   const isServiceActive = pathname.startsWith("/services/");
   return (
     <div>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container">
           {/* Brand */}
           <a className="navbar-brand p-0 m-0" href="#">

@@ -24,14 +24,20 @@ export default function Projects() {
                   <div className="card h-100 shadow-sm border-0 text-center">
                     <div className="card-body">
                       <img
-                        src="/icons/innovation.png"
+                        src="/web.png"
                         alt="Innovation"
                         style={{ width: "60px", marginBottom: "15px" }}
                       />
-                      <h5 className="card-title">Innovation</h5>
-                      <p className="card-text small">
-                        Driving modern solutions that transform businesses
-                        through cutting-edge technology.
+                      <h5 className="card-title" style={{ fontSize: "14px" }}>
+                        Web Design & Development
+                      </h5>
+                      <p
+                        className="card-text small text-muted"
+                        style={{ fontSize: "12px" }}
+                      >
+                        Building responsive, user-friendly, and visually
+                        appealing websites that work seamlessly across devices
+                        and meet both functional and business needs.
                       </p>
                     </div>
                   </div>
@@ -42,14 +48,20 @@ export default function Projects() {
                   <div className="card h-100 shadow-sm border-0 text-center">
                     <div className="card-body">
                       <img
-                        src="/icons/quality.png"
+                        src="/mobile.png"
                         alt="Quality"
                         style={{ width: "60px", marginBottom: "15px" }}
                       />
-                      <h5 className="card-title">Quality</h5>
-                      <p className="card-text small">
-                        Delivering high-quality solutions that ensure
-                        reliability and excellence.
+                      <h5 className="card-title" style={{ fontSize: "14px" }}>
+                        Mobile Apps Development
+                      </h5>
+                      <p
+                        className="card-text small text-muted"
+                        style={{ fontSize: "12px" }}
+                      >
+                        Designing and building responsive, user-friendly
+                        applications for Android and iOS devices that enhance
+                        accessibility and deliver seamless digital experiences.
                       </p>
                     </div>
                   </div>
@@ -60,14 +72,20 @@ export default function Projects() {
                   <div className="card h-100 shadow-sm border-0 text-center">
                     <div className="card-body">
                       <img
-                        src="/icons/team.png"
+                        src="/code.png"
                         alt="Teamwork"
                         style={{ width: "60px", marginBottom: "15px" }}
                       />
-                      <h5 className="card-title">Teamwork</h5>
-                      <p className="card-text small">
-                        Collaboration and partnership to bring ideas to life and
-                        achieve success together.
+                      <h5 className="" style={{ fontSize: "14px" }}>
+                        Information System Development
+                      </h5>
+                      <p
+                        className="card-text text-muted "
+                        style={{ fontSize: "12px" }}
+                      >
+                        Designing, building, and implementing software systems
+                        that manage, process, and organize data to support
+                        efficient decision-making and business operations.
                       </p>
                     </div>
                   </div>
