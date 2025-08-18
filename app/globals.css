@@ -18,6 +18,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
