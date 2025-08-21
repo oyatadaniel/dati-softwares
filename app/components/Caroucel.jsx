@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Caroucel() {
   return (
-    <div style={{ paddingTop: "60px" }}>
+    <div>
       <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           {/* Slide 1 */}

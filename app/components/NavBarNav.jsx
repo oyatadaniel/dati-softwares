@@ -1,16 +1,35 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function NavBarNav() {
   const pathname = usePathname();
+  const [isFixed, setIsFixed] = useState(false);
 
   // Dropdown is active only for /services/*
   const isServiceActive = pathname.startsWith("/services/");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Change 200 to whatever scrollY threshold you want
+      if (window.scrollY > 28) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div>
-      <nav className="navbar navbar-expand-lg fixed-top">
+      <nav
+        className={`navbar navbar-expand-lg bg-white shadow-sm transition-navbar ${
+          isFixed ? "fixed-top" : ""
+        }`}
+      >
         <div className="container">
           {/* Brand */}
           <a className="navbar-brand p-0 m-0" href="#">
