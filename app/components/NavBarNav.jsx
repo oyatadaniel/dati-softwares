@@ -66,9 +66,9 @@ export default function NavBarNav() {
               </li>
               <li className="nav-item mx-2">
                 <Link
-                  href="/about"
+                  href="/dati/our-apps"
                   className={`nav-link ${
-                    pathname === "/about" ? "active" : ""
+                    pathname === "/dati/our-apps" ? "active" : ""
                   }`}
                 >
                   Apps
@@ -150,9 +150,9 @@ export default function NavBarNav() {
               </li>
               <li className="nav-item mx-2">
                 <Link
-                  href="/contact"
+                  href="/dati/contact"
                   className={`nav-link ${
-                    pathname === "/contact" ? "active" : ""
+                    pathname === "/dati/contact" ? "active" : ""
                   }`}
                 >
                   Contact
