@@ -1,6 +1,69 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
+import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const toTitleCase = (str) => {
+    if (!str) return "";
+    return str
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
+
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const serviceID = "service_vgtxjmb";
+    const templateID = "template_ll8310q";
+    const userID = "2IRvl7wx4nRzS34h0";
+
+    const templateParams = {
+      name: toTitleCase(name),
+      subject: toTitleCase(subject), // if you want to fill `{{subject}}`
+      email: email,
+      phone: phone,
+      message: message,
+    };
+
+    emailjs
+      .send(serviceID, templateID, templateParams, userID)
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        toast("Message sent successfully to DATI Softwares", {
+          hideProgressBar: false,
+          autoClose: 2000,
+          type: "success",
+          position: "bottom-center",
+        });
+        setName("");
+        setPhone("");
+        setEmail("");
+        setMessage("");
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("FAILED...", err);
+        toast("Message failed to send.", {
+          hideProgressBar: false,
+          autoClose: 2000,
+          type: "error",
+          position: "bottom-center",
+        });
+        setLoading(false);
+      });
+  };
   return (
     <div className="">
       <div className="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 mt-4">
@@ -110,6 +173,8 @@ export default function Contact() {
                       id="name"
                       placeholder="Enter your full name"
                       required
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
 
@@ -124,6 +189,22 @@ export default function Contact() {
                       id="email"
                       placeholder="name@example.com"
                       required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label">
+                      Phone Number
+                    </label>
+                    <input
+                      type="number"
+                      className="form-control form-control-sm"
+                      id="phone"
+                      placeholder="0700000000"
+                      required
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                     />
                   </div>
 
@@ -136,7 +217,9 @@ export default function Contact() {
                       type="text"
                       className="form-control form-control-sm"
                       id="subject"
+                      value={subject}
                       placeholder="What's this about?"
+                      onChange={(e) => setSubject(e.target.value)}
                     />
                   </div>
 
@@ -151,13 +234,27 @@ export default function Contact() {
                       rows="6"
                       placeholder="Write your message..."
                       required
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     ></textarea>
                   </div>
 
                   {/* Submit Button */}
                   <div className="d-grid">
-                    <button type="submit" className="btn btn-custome btn-sm">
-                      Send Message
+                    <button
+                      type="submit"
+                      className="btn btn-custome btn-lg"
+                      onClick={handleSendMessage}
+                      disabled={
+                        loading ||
+                        !name ||
+                        !email ||
+                        !message ||
+                        !subject ||
+                        !phone
+                      }
+                    >
+                      {loading ? "Sending Message..." : "Send Message"}
                     </button>
                   </div>
                 </form>

@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div>
-      <footer className="bg-dark text-white pt-5 pb-4">
+      <footer className="bg-dark text-white pt-5 pb-4 footer">
         <div className="container text-md-start">
           <div className="row">
             {/* Company Info */}

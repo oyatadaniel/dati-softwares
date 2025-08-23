@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -56,7 +58,11 @@ export default function RootLayout({ children }) {
         {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>{children}</body>
+      <body>
+        {" "}
+        <ToastContainer position="top-right" autoClose={3000} />
+        {children}
+      </body>
     </html>
   );
 }
